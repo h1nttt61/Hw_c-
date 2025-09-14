@@ -162,6 +162,7 @@ double dpower(double base, int pow)
 
 double calculateMonthlyPayment(double loan, double rate, int years)
 {
+	assert(rate > 0 && loan > 0 && years > 0);
 	double monthly_rate = rate / 100 / 12;
 	int n = years * 12;
 
