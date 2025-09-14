@@ -2,6 +2,11 @@
 #include "hw1.h"
 #include <assert.h>
 
+/// <summary>
+/// Сумма квадратов цифр
+/// </summary>
+/// <param name="num"></param>
+/// <returns></returns>
 int sumOfSquares(int num)
 {
 	auto cnt = 0; num = abs(num);
@@ -15,6 +20,11 @@ int sumOfSquares(int num)
 	return cnt;
 }
 
+/// <summary>
+/// Проверка числа на палиндром
+/// </summary>
+/// <param name="num"></param>
+/// <returns></returns>
 bool IsPalindrone(int num)
 {
 	num = num < 0 ? -num : num;
@@ -29,6 +39,11 @@ bool IsPalindrone(int num)
 
 	return rev == temp;
 }
+
+/// <summary>
+/// Реверс числа
+/// </summary>
+/// <param name="num"></param>
 void reverseNumber(int& num)
 {
 	int sign = num > 0 ? 1 : -1;
@@ -44,6 +59,10 @@ void reverseNumber(int& num)
 	num = Cnum * sign;
 }
 
+/// <summary>
+/// Таблица степеней
+/// </summary>
+/// <param name="n"></param>
 void printPowerTable(int n)
 {
 	for (int i = 1; i <= n; i++)
@@ -59,6 +78,12 @@ void printPowerTable(int n)
 	}
 }
 
+/// <summary>
+/// Количество дней для удвоения вклада
+/// </summary>
+/// <param name="deposit"></param>
+/// <param name="rate"></param>
+/// <returns></returns>
 int daysToDoubleDeposit(double deposit, double rate)
 {
 	assert(rate > 0 && deposit > 0);
@@ -73,6 +98,11 @@ int daysToDoubleDeposit(double deposit, double rate)
 	return days;
 }
 
+/// <summary>
+/// Произведение цифр числа
+/// </summary>
+/// <param name="num"></param>
+/// <returns></returns>
 int productOfDigits(int num)
 {
 	num = abs(num);
@@ -87,6 +117,13 @@ int productOfDigits(int num)
 	return res;
 }
 
+
+/// <summary>
+/// Возведение в степень
+/// </summary>
+/// <param name="base"></param>
+/// <param name="exp"></param>
+/// <returns></returns>
 double power(double base, int exp)
 {
 	if (exp == 0) return 1.0;
@@ -104,6 +141,11 @@ double power(double base, int exp)
 	return exp > 0 ? res : 1.0 / res;
 }
 
+/// <summary>
+/// Проверка числа Армстронга
+/// </summary>
+/// <param name="num"></param>
+/// <returns></returns>
 bool isArmstrong(int num)
 {
 	int original = num, sum = 0, digitcnt = 0, temp = num;
@@ -130,6 +172,10 @@ bool isArmstrong(int num)
 	return sum == original;
 }
 
+/// <summary>
+/// Вывод ромба из чисел
+/// </summary>
+/// <param name="n"></param>
 void printNumberDiamond(int n)
 {
 	for (int i = -n + 1; i < n; i++) {
@@ -152,6 +198,12 @@ void printNumberDiamond(int n)
 
 }
 
+/// <summary>
+/// Вспомогательная функция для степени
+/// </summary>
+/// <param name="base"></param>
+/// <param name="pow"></param>
+/// <returns></returns>
 double dpower(double base, int pow)
 {
 	double res = 1.0;
@@ -160,6 +212,13 @@ double dpower(double base, int pow)
 	return res;
 }
 
+/// <summary>
+/// Расчет ежемесячного платежа по кредиту
+/// </summary>
+/// <param name="loan"></param>
+/// <param name="rate"></param>
+/// <param name="years"></param>
+/// <returns></returns>
 double calculateMonthlyPayment(double loan, double rate, int years)
 {
 	assert(rate > 0 && loan > 0 && years > 0);
