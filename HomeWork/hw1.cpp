@@ -4,7 +4,7 @@
 
 int sumOfSquares(int num)
 {
-	auto cnt = 0, num = abs(num);
+	auto cnt = 0; num = abs(num);
 	while (num > 0)
 	{
 		int x = num % 10;
@@ -152,12 +152,12 @@ void printNumberDiamond(int n)
 
 }
 
-double power(double base, int pow)
+double dpower(double base, int pow)
 {
 	double res = 1.0;
 	for (int i = 0; i < pow; i++)
 		res *= base;
-	return base;
+	return res;
 }
 
 double calculateMonthlyPayment(double loan, double rate, int years)
@@ -165,7 +165,7 @@ double calculateMonthlyPayment(double loan, double rate, int years)
 	double monthly_rate = rate / 100 / 12;
 	int n = years * 12;
 
-	double numP = power(1 + monthly_rate, n);
+	double numP = dpower(1 + monthly_rate, n);
 
 	double monthly_payment = loan * (monthly_rate * numP) / (numP - 1);
 

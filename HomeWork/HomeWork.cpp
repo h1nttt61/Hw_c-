@@ -22,4 +22,6 @@ int main()
     printPowerTable(5);
 
     printNumberDiamond(4);
+
+    std::cout << calculateMonthlyPayment(1000000, 12, 1);
 }
