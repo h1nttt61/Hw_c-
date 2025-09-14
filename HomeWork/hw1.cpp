@@ -4,7 +4,7 @@
 
 int sumOfSquares(int num)
 {
-	auto cnt = 0;
+	auto cnt = 0, num = abs(num);
 	while (num > 0)
 	{
 		int x = num % 10;
