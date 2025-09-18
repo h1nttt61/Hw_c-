@@ -12,4 +12,5 @@ double power(double, int);
 bool isArmstrong(int);
 void printNumberDiamond(int);
 double calculateMonthlyPayment(double, double, int);
-#endif HOMEWWORKTASK_H
+
+#endif
